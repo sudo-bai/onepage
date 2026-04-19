@@ -32,7 +32,7 @@
 
 ### 从发布版本安装
 
-1. 访问 [Releases](https://github.com/<你的用户名>/onepage/releases) 页面
+1. 访问 [Releases](https://github.com/sudo-bai/onepage/releases) 页面
 2. 下载最新版本的 `.zip` 文件
 3. 解压到本地目录
 4. 按照"从源码安装"的步骤2加载扩展
