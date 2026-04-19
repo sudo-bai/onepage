@@ -19,7 +19,7 @@
 
 1. 克隆仓库：
    ```bash
-   git clone https://github.com/<你的用户名>/onepage.git
+   git clone https://github.com/sudo-bai/onepage.git
    ```
 
 2. 加载扩展：
