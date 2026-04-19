@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Skadi Homepage Local New Tab",
+  "version": "2.1.0",
+  "description": "Bundle the Skadi homepage project directly into a local new tab extension.",
+  "chrome_url_overrides": {
+    "newtab": "app/index.html"
+  },
+  "action": {
+    "default_title": "Skadi Homepage Local New Tab"
+  }
+}
