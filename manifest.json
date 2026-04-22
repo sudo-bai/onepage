@@ -1,12 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "Skadi Homepage Local New Tab",
+  "name": "Onepage - Custom New Tab",
   "version": "2.1.0",
-  "description": "Bundle the Skadi homepage project directly into a local new tab extension.",
+  "description": "A beautiful and functional custom new tab page",
   "chrome_url_overrides": {
     "newtab": "app/index.html"
   },
   "action": {
-    "default_title": "Skadi Homepage Local New Tab"
-  }
+    "default_title": "Onepage"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://t.alcy.cc/*",
+    "https://tc.alcy.cc/*",
+    "https://bing.biturl.top/*"
+  ]
 }
