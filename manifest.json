@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Onepage - Custom New Tab",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A beautiful and functional custom new tab page",
   "chrome_url_overrides": {
     "newtab": "app/index.html"
@@ -14,6 +14,7 @@
     "tabs"
   ],
   "host_permissions": [
+    "*://*/*",
     "https://t.alcy.cc/*",
     "https://tc.alcy.cc/*",
     "https://bing.biturl.top/*",

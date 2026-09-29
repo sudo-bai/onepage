@@ -1,8 +1,8 @@
-# Onepage Extension v2.1.0
+# Onepage Extension v2.2.0
 
-## 新版本发布
+## 本次更新
 
-这是Onepage浏览器扩展的初始发布版本。
+修复了背景图与网站图标（favicon）的缓存问题，显著提升新标签页的打开速度。
 
 ### 功能特性
 
@@ -16,6 +16,14 @@
 
 ### 变更日志
 
+**v2.2.0**
+- 背景图：不再依赖 `navigator.onLine` 判断在线/离线，改为每次直接联网获取新图；只有断网（请求失败）时才回退到缓存，且缓存仅保留最后一张（`cached_bg_b64`）。
+- 背景图：改用 `fetch(..., { cache: 'no-store' })` 绕过 HTTP 缓存，修复"背景一直不变"的问题。
+- 背景图：修复 `no-cors` 导致响应体为空、缓存永远写不进去的问题。
+- 图标：替换已失效的第三方接口（`api.uomg.com` 请求超时、`api.iowen.cn` 证书过期），改为按序尝试「站点自身 `/favicon.ico` → favicon.im → DuckDuckGo」，每个源 5 秒超时。
+- 图标：修复跨域图标无法转 base64 导致缓存写不进去的问题；图标首次加载由约 10 秒降到 1 秒以内，之后走本地缓存秒开。
+- 权限：`host_permissions` 增加 `*://*/*`，用于直连站点获取图标。
+
 **v2.1.0** (初始版本)
 - 初始发布：基于homepage项目的完整浏览器扩展
 - 包含视觉修复：解决下拉菜单方块虚影问题
@@ -25,7 +33,7 @@
 
 ### 安装说明
 
-1. 下载 `onepage-extension-2.1.0.zip`
+1. 下载 `onepage-extension-2.2.0.zip`
 2. 解压到本地目录
 3. 打开浏览器扩展页面 (`brave://extensions/` 或 `chrome://extensions/`)
 4. 开启"开发者模式"
@@ -36,7 +44,7 @@
 ### 文件列表
 
 ```
-onepage-extension-2.1.0.zip
+onepage-extension-2.2.0.zip
 ├── manifest.json          # 扩展清单 (v3)
 ├── app/                   # 构建的前端应用
 │   ├── index.html        # 主页面
